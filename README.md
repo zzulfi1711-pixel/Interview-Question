@@ -1,6 +1,6 @@
 ## Interview Questions Web App
 
-Run index.js
+Run index.html
 
 A web-based tool designed to streamline interview preparation and documentation. The application:
 
