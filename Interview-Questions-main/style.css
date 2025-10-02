@@ -1,0 +1,12 @@
+.clickable-div {
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.clickable-div:hover {
+  background-color: #eee;
+}
+.clicked{
+background-color:black;
+}

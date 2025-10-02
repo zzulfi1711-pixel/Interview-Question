@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Clickable Divs</title>
+    <style>
+      .main-questions{
+
+        z-index:4;
+      }
+      .menu-bar{
+        z-index: 1;
+        flex-direction: column;
+        top: 0;
+        position: fixed;
+        left: 0;
+        background: white;
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+      }
+
+      .clickabl{
+        display: block;
+        font-size: 17px;
+      }
+      .clickable-div-sq, .clickable-div-tq, .clickable-div-wq, .clickable-div-oq, .clickable-div-gq{
+        font-size: 28px;
+      } 
+
+      .clickable-div-gq{
+        background: linear-gradient(rgb(29 235 94),rgb(183 183 183 / 45%));
+      }
+
+      .clickable-div-oq{
+        background: linear-gradient(rgb(29 235 94),rgb(183 183 183 / 45%));
+      }
+
+      .clickable-div-wq{
+        background: linear-gradient(rgb(29 235 94),rgb(183 183 183 / 45%));
+      }
+
+      .clickable-div-tq{
+        background: linear-gradient(rgb(29 235 94),rgb(183 183 183 / 45%));
+      }
+
+      .clickable-div-sq{
+        background: linear-gradient(rgb(29 235 94),rgb(183 183 183 / 45%));
+      }
+      .main-questions h1{
+        display: flex;
+        justify-content: center;
+        font-size: 42px;
+        border: 4px solid lime;
+      }
+      /* Add some basic CSS to style the divs */
+      .clickabl,.clickable-div-sq,.clickable-div-tq,.clickable-div-wq,.clickable-div-oq,.clickable-div-gq {
+        padding: 10px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+        border-radius: 12px;
+      }
+      #transfer-button{
+        top: 281px;
+        right: 70px;
+        position: fixed;
+        font-size: 16px;
+        background: #26f23d;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0.5em;
+        border-radius: 3px;
+      }
+      .reset{
+        margin: 10px;
+        top: 323px;
+        right: 70px;
+        position: fixed;
+        font-size: 16px;
+        background: #1ff145;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0.5em;
+        border-radius: 3px;
+      }
+      #upload{
+        font-size: 16px;
+        background: #a8a2a3;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0.5em;
+        border-radius: 3px;
+      }
+      .clickable-div:hover {
+        background-color: #eee;
+      }
+	  .clicked{
+		background-color:rgb(88, 148, 128);
+	  }
+    .clicked2 {
+      padding: 10px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+      cursor: pointer;
+      width: 80%;
+    }
+    .inpute{
+        padding: 10px;
+        padding-right: 10px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        border-radius: 5%;
+        width: 500px;
+        height: 60px;
+        overflow: scroll;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .button-style{
+     margin: 10px;
+    }
+    .close{
+      top: 20%;
+      right: 5%;
+      position: fixed;
+    }
+    .container-file{
+      margin:16px;
+    }
+    .inputExcel::file-selector-button {
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0.5em;
+      border-radius: 3px;
+
+      background: #a8a2a3;
+
+  }
+    </style>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="main-questions">
+
+        <h1>Interview Questions</h1>
+        <h2>Instructions:</h2>
+        <ul>
+          <li>Reset will remove the selected questions from memory.</li>
+          <li>Transfer divs will take your selected questions to another page</li>
+          <li>Insert the Excel file</li>
+        </ul>
+
+      <!-- Input element to upload an excel file --> 
+      <br><br>
+        <div class="container-file">
+          <input type="file" class="inputExcel">
+          
+          <button id="upload">Upload</button>
+        </div>
+      <div id="div-container">
+        
+      </div>
+
+      <button id="transfer-button">Transfer to New Doc</button>
+    </div>
+
+
+
+
+    <div class="menu-bar" style="display: none;">
+      <h1>Clicked Question:</h1>
+      <h3>INTRODUCTION:</h3>
+      <ul>
+        <li>	Interviewer to provide the candidate a brief history of Welldone Mechanical (how they came to be – if not covered during the meet and greet).</li>
+        <li>	Interviewer gives title and briefly describes his/her job (to put the candidate at ease).</li>
+        <li>  If there are any answers that you would like to verify or get more information on from a reference, tell the candidate that you would like a reference to do that.  Make sure they confirm the reference knows they will be called. </li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script>
+    <script src="script3.js"></script>
+  </body>
+</html>
