@@ -1,5 +1,7 @@
 ## Interview Questions Web App
 
+Run index.js
+
 A web-based tool designed to streamline interview preparation and documentation. The application:
 
 Reads interview questions dynamically from an Excel file.
